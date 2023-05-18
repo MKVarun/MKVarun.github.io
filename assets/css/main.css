@@ -4029,3 +4029,21 @@ input, select, textarea {
       margin-left: 10px;
       margin-top: 10px;
     }
+
+.code-button {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.code-button:hover {
+  background-color: #49fcd4;
+  color: #000;
+}
+
