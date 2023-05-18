@@ -1871,7 +1871,7 @@ input, select, textarea {
 		height: 3rem;
 		letter-spacing: 0.175em;
 		line-height: 3rem;
-		padding: 0 2rem;
+		padding: 0 1rem;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -4030,7 +4030,7 @@ input, select, textarea {
       margin-top: 10px;
     }
 
-.code-button {
+.cool-button {
   display: inline-block;
   padding: 2px 4px;
   background-color: #000;
@@ -4042,8 +4042,16 @@ input, select, textarea {
   text-decoration: none;
 }
 
-.code-button:hover {
+.cool-button:hover {
   background-color: #49fcd4;
   color: #000;
 }
 
+.bullet-list {
+    list-style-type: none;
+  }
+
+.bullet-list li::before {
+    content: '•';
+    margin-right: 5px;
+}
