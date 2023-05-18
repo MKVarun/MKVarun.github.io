@@ -4055,3 +4055,18 @@ input, select, textarea {
     content: '•';
     margin-right: 5px;
 }
+
+.circle-image {
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .circle-image img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      transform: translateY(-30px);
+    }
