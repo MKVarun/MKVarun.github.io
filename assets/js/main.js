@@ -231,37 +231,22 @@ function hideCitation2() {
 
 // Contact Form
 
-document.addEventListener("DOMContentLoaded", function() {
-      var form = document.getElementById("contact-form");
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        if(areRequiredFieldsFilled()){
-        showSuccessMessage();
-        resetForm();
-    }
-      });
+// document.addEventListener("DOMContentLoaded", function() {
+//       var form = document.getElementById("contact-me");
+//       form.addEventListener("submit", function(event) {
+//         event.preventDefault();
+//         resetForm();
+//       });
 
-      resetForm();
-    });
+//       	resetForm();
+//     });
 
-function showSuccessMessage() {
-      var messageElement = document.getElementById("success-message");
-      messageElement.style.display = "block";
- }
-
-function areRequiredFieldsFilled() {
-      var requiredFields = document.querySelectorAll("#contact-form [required]");
-      for (var i = 0; i < requiredFields.length; i++) {
-        if (!requiredFields[i].value) {
-          return false;
-        }
-      }
-      return true;
-    }
- function resetForm() {
-      var form = document.getElementById("contact-form");
-      form.reset();
-    }
+//  function resetForm() {
+//       var form = document.getElementById("contact-me");
+//       setTimeout(function() {
+//             form.reset();
+//         }, 1000);
+//         }
 
 // Navigation Menu
 
