@@ -3400,7 +3400,11 @@ input, select, textarea {
 			}
 
 				#wrapper > section > .content > section:first-child {
-					margin-top: 6rem;
+					margin-top: 4rem;
+				}
+
+				#wrapper > section > .content > section:not(:first-child) {
+  					margin-top: 3rem;
 				}
 
 			#wrapper > section.intro {
@@ -3454,7 +3458,7 @@ input, select, textarea {
 			}
 
 		#wrapper section {
-			margin: 7.5rem 0 0 0;
+			margin: 4rem 0 0 0;
 		}
 
 			#wrapper section > header {
@@ -3995,19 +3999,20 @@ input, select, textarea {
 }
 
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px;  /* Adjust as needed */
-    background-color: #333;
-    padding: 10px;
-    overflow: auto;  /* Enables scrolling if the content is taller than the screen */
-    z-index: 1;
-    display: none;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  display: none;
+  padding: 10px;
 
-.nav-link {
+}
+ .nav-link {
     color: #fff;
     display: block;  /* Makes each link take up its own line */
     text-decoration: none;
@@ -4019,7 +4024,29 @@ input, select, textarea {
 }
 
 #navbar.show {
-    display: block;  /* Show the navbar when the .show class is added */
+  transform: translateX(0%);
+  display: block;
+}
+
+.nav-toggle-container {
+  position: fixed;
+  bottom: 0;	
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#nav-toggle.show{
+	display: block;
+}
+.nav-toggle-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: none;
 }
 
 .success-message {

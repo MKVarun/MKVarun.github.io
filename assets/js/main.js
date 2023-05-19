@@ -267,53 +267,74 @@ function areRequiredFieldsFilled() {
 
 // Get all the nav links
 var navLinks = document.getElementsByClassName("nav-link");
+var navbar = document.getElementById("navbar");
+var section1 = document.getElementById("about-me");
+var navToggle = document.getElementById("nav-toggle");
+var isNavOpen = false;
 
 // Add a "click" event listener to each nav link
 for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click", function(event) {
-        // Prevent the default action (jumping to the section immediately)
-        event.preventDefault();
+  navLinks[i].addEventListener("click", function(event) {
+    // Prevent the default action (jumping to the section immediately)
+    event.preventDefault();
 
-        // Smoothly scroll to the corresponding section
-        document.querySelector(this.hash).scrollIntoView({ behavior: "smooth" });
+    // Smoothly scroll to the corresponding section
+    document.querySelector(this.hash).scrollIntoView({ behavior: "smooth" });
 
-        // Remove the "active" class from all nav links
-        for (var j = 0; j < navLinks.length; j++) {
-            navLinks[j].classList.remove("active");
-        }
+    // Remove the "active" class from all nav links
+    for (var j = 0; j < navLinks.length; j++) {
+      navLinks[j].classList.remove("active");
+    }
 
-        // Add the "active" class to the clicked nav link
-        this.classList.add("active");
-    });
+    // Add the "active" class to the clicked nav link
+    this.classList.add("active");
+    
+    // Close the navigation menu
+    navbar.classList.remove("show");
+    isNavOpen = false;
+  });
 }
 
-
 window.addEventListener("scroll", function() {
-    var navbar = document.getElementById("navbar");
-    var section1 = document.getElementById("about-me");
-    var navLinks = document.getElementsByClassName("nav-link");
+  if (window.pageYOffset > section1.offsetHeight - 200 && !isNavOpen) {
+    navbar.classList.add("show");
 
-    if (window.pageYOffset > section1.offsetHeight) {
-        navbar.classList.add("show");
+  } else {
+    navbar.classList.remove("show");
+  }
+
+  if (window.pageYOffset > section1.offsetHeight - 200) {
+    navToggle.classList.add("show");
+
+  } else {
+    navToggle.classList.remove("show");
+    isNavOpen = false;
+  }
+
+  // Loop over each nav link
+  for (var i = 0; i < navLinks.length; i++) {
+    // Get the section that this nav link points to
+    var section = document.querySelector(navLinks[i].hash);
+
+    // Check if this section is in the viewport
+    if (
+      section.offsetTop - 100 <= window.pageYOffset &&
+      section.offsetTop + section.offsetHeight - 100 > window.pageYOffset
+    ) {
+      // This section is in the viewport, so add the "active" class to the nav link
+      navLinks[i].classList.add("active");
     } else {
-        navbar.classList.remove("show");
+      // This section is not in the viewport, so remove the "active" class from the nav link
+      navLinks[i].classList.remove("active");
     }
-
-    // Loop over each nav link
-    for (var i = 0; i < navLinks.length; i++) {
-        // Get the section that this nav link points to
-        var section = document.querySelector(navLinks[i].hash);
-
-        // Check if this section is in the viewport
-        if (
-            section.offsetTop <= window.pageYOffset &&
-            section.offsetTop + section.offsetHeight > window.pageYOffset
-        ) {
-            // This section is in the viewport, so add the "active" class to the nav link
-            navLinks[i].classList.add("active");
-        } else {
-            // This section is not in the viewport, so remove the "active" class from the nav link
-            navLinks[i].classList.remove("active");
-        }
-    }
+  }
 });
+
+// Click event handler for navToggle button
+navToggle.addEventListener("click", function() {
+  navbar.classList.toggle("show");
+  isNavOpen = !isNavOpen;
+});
+
+
+
