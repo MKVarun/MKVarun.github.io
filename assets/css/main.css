@@ -4014,13 +4014,14 @@ input, select, textarea {
   transition: transform 0.3s ease-in-out;
   display: none;
   padding: 10px;
+  padding-top: 80px;
 
 }
  .nav-link {
     color: #fff;
-    display: block;  /* Makes each link take up its own line */
+    display: block; 
     text-decoration: none;
-    padding: 10px 0;  /* Adds vertical padding */
+    padding: 10px 0; 
 }
 
 .nav-link.active {
@@ -4034,18 +4035,21 @@ input, select, textarea {
 
 .nav-toggle-container {
   position: fixed;
-  bottom: 0;	
+  top: 0;	
   left: 0;
   z-index: 2;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  color: #fff;
 }
 
 #nav-toggle.show{
+	color: #fff;
 	display: block;
 }
 .nav-toggle-container button {
+  color: #fff;
   background: none;
   border: none;
   cursor: pointer;
