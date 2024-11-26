@@ -4098,13 +4098,13 @@ input, select, textarea {
       transform: translateY(-30px);
     }
 
-a.icon, a.fa-brands {
+a.icon, a.fa-brands, a.fa-solid {
     text-decoration: none;
     display: inline-block;
     padding: 10px;
 }
 
-a.icon:hover, a.fa-brands:hover, a.fa-solid {
+a.icon:hover, a.fa-brands:hover, a.fa-solid:hover {
     background-color: #e0e0e0;
     border-radius: 4px;
     transition: background-color 0.8s ease;
