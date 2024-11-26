@@ -4097,3 +4097,15 @@ input, select, textarea {
       height: auto;
       transform: translateY(-30px);
     }
+
+a.icon, a.fa-brands {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+a.icon:hover, a.fa-brands:hover {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 5px;
+}
