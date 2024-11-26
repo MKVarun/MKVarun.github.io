@@ -4104,7 +4104,7 @@ a.icon, a.fa-brands {
     padding: 10px;
 }
 
-a.icon:hover, a.fa-brands:hover {
+a.icon:hover, a.fa-brands:hover, a.fa-solid {
     background-color: #e0e0e0;
     border-radius: 4px;
     transition: background-color 0.8s ease;
