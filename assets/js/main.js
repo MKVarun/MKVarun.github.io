@@ -255,6 +255,7 @@ var navLinks = document.getElementsByClassName("nav-link");
 var navbar = document.getElementById("navbar");
 var section1 = document.getElementById("about-me");
 var navToggle = document.getElementById("nav-toggle");
+var navToggleContainer = document.getElementById("nav-toggle-container");
 var isNavOpen = false;
 
 // Add a "click" event listener to each nav link
@@ -283,7 +284,6 @@ for (var i = 0; i < navLinks.length; i++) {
 window.addEventListener("scroll", function() {
   if (window.pageYOffset > section1.offsetHeight - 200 && !isNavOpen) {
     navbar.classList.add("show");
-
   } else {
     navbar.classList.remove("show");
   }
