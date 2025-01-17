@@ -282,11 +282,11 @@ for (var i = 0; i < navLinks.length; i++) {
 }
 
 window.addEventListener("scroll", function() {
-  if (window.pageYOffset > section1.offsetHeight - 200 && !isNavOpen) {
-    navbar.classList.add("show");
-  } else {
-    navbar.classList.remove("show");
-  }
+  // if (window.pageYOffset > section1.offsetHeight - 200 && !isNavOpen) {
+  //   navbar.classList.add("show");
+  // } else {
+  navbar.classList.remove("show");
+  // }
 
   if (window.pageYOffset > section1.offsetHeight - 200) {
     navToggle.classList.add("show");
