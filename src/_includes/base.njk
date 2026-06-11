@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if title %}{{ title }} — {% endif %}Varun Machhale Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description }}">
+  <link rel="icon" href="images/brain_icon.png" type="image/x-icon">
+  <link rel="canonical" href="https://mkvarun.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/brands.css">
+  <link rel="stylesheet" href="assets/css/solid.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="bar bar--top">
+      <a class="wordmark" href="index.html">Varun&nbsp;M.&nbsp;Kumar</a>
+      <nav class="primary" aria-label="Primary">
+        <a href="index.html"{% if active == "home" %} class="is-active"{% endif %}>Index</a>
+        <a href="about.html"{% if active == "about" %} class="is-active"{% endif %}>About</a>
+        <a href="research.html"{% if active == "research" %} class="is-active"{% endif %}>Research</a>
+        <a href="education.html"{% if active == "education" %} class="is-active"{% endif %}>Education</a>
+        <a href="publications.html"{% if active == "publications" %} class="is-active"{% endif %}>Publications</a>
+        <a href="cv.html"{% if active == "cv" %} class="is-active"{% endif %}>CV</a>
+        <a href="contact.html"{% if active == "contact" %} class="is-active"{% endif %}>Contact</a>
+      </nav>
+    </div>
+    <div class="bar bar--meta">
+      <span class="meta-item">Researcher · Machine Learning × Neuroscience</span>
+      <span class="meta-item meta-item--right">Email: contact [at] mkvarun [dot] com</span>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="colophon">
+    <div class="rule rule--thick"></div>
+    <div class="colophon-grid">
+      <section>
+        <h6>Colophon</h6>
+        <p>Set in Charter (serif body) and IBM Plex Mono (metadata). Tuft-inspired aesthetic. Built with Eleventy. Hosted on GitHub Pages. <br>Last updated 10&nbsp;June&nbsp;2026.</p>
+        <br>
+        <dt><h6>A note</h6>
+        <p class="sidenote">This site is deliberately text-heavy and low on imagery. The point is to read, not to be dazzled :)</p>
+      </section>
+      <section>
+        <h6>Elsewhere</h6>
+        <ul class="linklist">
+          <li><a class="social-link" href="https://www.linkedin.com/in/mkvarun/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span class="social-label">LinkedIn</span></a></li>
+          <li><a class="social-link" href="https://github.com/MKVarun" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="social-label">GitHub</span></a></li>
+          <li><a class="social-link" href="https://scholar.google.com/citations?hl=en&user=_vpqGSoAAAAJ" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i><span class="social-label">Google Scholar</span></a></li>
+          <li><a class="social-link" href="https://orcid.org/0000-0001-8931-4476" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid" aria-hidden="true"></i><span class="social-label">ORCID</span></a></li>
+          <li><a class="social-link" href="https://bsky.app/profile/mkvarun.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky" aria-hidden="true"></i><span class="social-label">Bluesky</span></a></li>
+          <li><a class="social-link" href="https://youtube.com/@officialmkvarun" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="social-label">YouTube</span></a></li>
+          <li><a class="social-link" href="https://medium.com/@mkvarun" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-medium" aria-hidden="true"></i><span class="social-label">Medium</span></a></li>
+        </ul>
+      </section>
+      <section>
+        <h6>Disclaimer</h6>
+        <p class="sidenote">The documents and links provided on this website are intended solely for informational purposes. While links to resources such as GitHub are permissible according to their respective licenses, the reproduction or unauthorized use of documents, including award letters, reports, and unpublished papers, is strictly prohibited. Any misuse will be subject to legal action. For questions, regarding the appropriate use of these materials, please contact Varun directly.</em></p>
+      </section>
+    </div>
+    <p class="copyright">&copy; 2026 Varun Machhale Kumar. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
