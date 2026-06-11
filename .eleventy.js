@@ -3,7 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy({ "pdfs/Varun_CV.pdf": "pdfs/Varun_CV.pdf" });
-
+  eleventyConfig.addPassthroughCopy("CNAME");
   // Add target="_blank" rel="noopener noreferrer" to external links
   eleventyConfig.addTransform("externalLinks", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-
+  
   return {
     dir: {
       input: "src",
