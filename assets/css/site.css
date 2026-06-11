@@ -918,6 +918,19 @@ table.cv .honor { color: var(--accent); font-weight: 600; }
 }
 
 /* ---------- Responsive ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:        #f4f1ea;
+    --paper-2:      #ebe6da;
+    --ink:          #14110f;
+    --ink-2:        #3a342e;
+    --ink-3:        #6a6058;
+    --rule:         #1a1714;
+    --accent:       #8a1c1c;
+    /* add any other variables you want to keep unchanged */
+  }
+}
+
 @media (max-width: 900px) {
   .abstract { grid-template-columns: 1fr; }
   .abstract-side { border-left: 0; border-top: 1px solid var(--rule); padding: 1rem 0 0; }
