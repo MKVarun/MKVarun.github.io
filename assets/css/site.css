@@ -677,8 +677,8 @@ table.cv .honor { color: var(--accent); font-weight: 600; }
   font-family: var(--mono);
   font-size: 0.78rem;
 }
-.pub .links a { text-decoration: none; border-bottom: 1px solid var(--rule-2); }
-.pub .links a:hover { border-bottom-color: var(--accent); }
+.pub .links a { text-decoration: underline;}
+.pub .links a:hover { text-decoration: var(--accent); }
 
 .pub .stamp {
   font-family: var(--mono);
