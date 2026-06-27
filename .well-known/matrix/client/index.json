@@ -1,6 +1,5 @@
 {
   "m.homeserver": {
     "base_url": "https://chat.mkvarun.com"
-  },
-    "org.matrix.msc4028.rtc_server": "https://call.element.io"
+  }
 }
