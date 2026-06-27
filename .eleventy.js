@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy({ "pdfs/Varun_CV.pdf": "pdfs/Varun_CV.pdf" });
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy(".well-known", {copyOptions: { dot: true }});
   // Add target="_blank" rel="noopener noreferrer" to external links
   eleventyConfig.addTransform("externalLinks", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
